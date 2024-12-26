@@ -1,21 +1,21 @@
 services:
-  app:
-    build: .
-    ports:
-      - "3000:3000"
-    volumes:
-      - .:/usr/src/app
-      - /usr/src/app/node_modules
-    environment:
-      - DATABASE_NAME=music_library
-      - DATABASE_USER=shashank
-      - DATABASE_PASSWORD=shashank
-      - DATABASE_HOST=db
-      - DATABASE_DIALECT=postgres
-      - JWT_SECRET=your_jwt_secret
-      - PORT=3000
-    depends_on:
-      - db
+  # app:
+  #   build: .
+  #   ports:
+  #     - "3000:3000"
+  #   volumes:
+  #     - .:/usr/src/app
+  #     - /usr/src/app/node_modules
+  #   environment:
+  #     - DATABASE_NAME=music_library
+  #     - DATABASE_USER=shashank
+  #     - DATABASE_PASSWORD=shashank
+  #     - DATABASE_HOST=db
+  #     - DATABASE_DIALECT=postgres
+  #     - JWT_SECRET=your_jwt_secret
+  #     - PORT=3000
+  #   depends_on:
+  #     - db
 
   db:
     image: postgres:15
